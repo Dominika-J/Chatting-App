@@ -3,7 +3,7 @@ const OthersMessage = () => {
         <div>   
             OthersMessage
         </div>
-    )
+    );
 }
 
 export default OthersMessage;

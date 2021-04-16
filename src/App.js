@@ -6,11 +6,11 @@ const App = () => {
         <ChatEngine
             height="100vh"
             projectID="9a567ff2-2e52-4854-bd1a-f321c3bacb4c"
-            userName=""
+            userName="ReactUser"
             userSecret="123"
-            renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>} // 
+            renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps}/>} 
         />
     );
 }
 
-export default App;
+export default App; 
