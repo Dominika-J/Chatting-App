@@ -8,7 +8,7 @@ const ChatFeed = (props) => {
     // console.log(props);
 
     const chat = chats && chats[activeChat];
-    
+
     const renderReadReceipts = (message, isMyMessage) => {
         chat.people.map((person, index) => person.last_read === message.id && (
             <div
@@ -35,36 +35,36 @@ const ChatFeed = (props) => {
                     <div className="message-block">
                         {
                             isMyMessage
-                                ? <MyMessage message={message} />
+                                ? <MyMessage message={message} /> //if this is my message, render my message else render others message
                                 : <OthersMessage message={message}
                                     lastMessage={message[lastMessageKey]} />
                         }
                     </div>
-                    <div className="read-receipts"
-                        style={{ marginRight: isMyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px' }}>
-                            {renderReadReceipts(message, isMyMessage)}
+                    {/* if this is my message marginRight else others message marginLeft */}
+                    <div className="read-receipts" style={{ marginRight: isMyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px' }}>
+                        {renderReadReceipts(message, isMyMessage)}
                     </div>
                 </div>
             )
         })
     }
 
-    if (!chat) return 'Loading...'
+    if (!chat) return 'Loading...' // is this chat existing? if yes return "chat-feed"
 
     return (
-        <div className="chat-feed">
-            <div className="chat-title-container">
-                <div className="chat-title">{chat?.title}</div>
+        <div className="chat-feed"> {/* whole chat feed */}
+            <div className="chat-title-container"> {/* container of chat heading (name of chat, names of users) */}
+                <div className="chat-title">{chat?.title}</div> {/* if chat exists give me its title from props) */}
                 <div className="chat-subtitle">
                     {chat.people.map((person) =>
-                        ` ${person.person.username}`)}
+                        ` ${person.person.username}`)} {/* return usernames which are using this chat */}
                 </div>
             </div>
             {renderMessages()}
             <div style={{ height: '100px' }} />
-            <div className="message-form-container"></div>
-            <MessageForm {...props} chatId={activeChat} />
-
+            <div className="message-form-container">
+                <MessageForm {...props} chatId={activeChat} />
+            </div>
         </div>
     )
 }
