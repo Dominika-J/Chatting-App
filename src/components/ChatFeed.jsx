@@ -5,9 +5,10 @@ import OthersMessage from './OthersMessage';
 
 const ChatFeed = (props) => {
     const { chats, activeChat, userName, messages } = props;
+    // console.log(props);
 
     const chat = chats && chats[activeChat];
-
+    
     const renderReadReceipts = (message, isMyMessage) => {
         chat.people.map((person, index) => person.last_read === message.id && (
             <div
@@ -21,13 +22,13 @@ const ChatFeed = (props) => {
         ))
     }
 
-    const renderMessages = () => {
-        const keys = Object.keys(messages);
+    const renderMessages = () => { // used for generating messages
+        const keys = Object.keys(messages); //keys are IDs of specific messages
 
         return keys.map((key, index) => {
-            const message = messages[key];
-            const lastMessageKey = index === 0 ? null : keys[index - 1];
-            const isMyMessage = userName === message.sender.username;
+            const message = messages[key]; //one specific message
+            const lastMessageKey = index === 0 ? null : keys[index - 1]; // is this the last message
+            const isMyMessage = userName === message.sender.username; // my message
 
             return (
                 <div key={`msg_${index}`} style={{ width: '100%' }}>
@@ -62,7 +63,7 @@ const ChatFeed = (props) => {
             {renderMessages()}
             <div style={{ height: '100px' }} />
             <div className="message-form-container"></div>
-            <MessageForm {...props} chatiId={activeChat} />
+            <MessageForm {...props} chatId={activeChat} />
 
         </div>
     )
