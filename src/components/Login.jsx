@@ -25,7 +25,7 @@ const Login = () => {
             window.location.reload()
         } catch (error) {
             //not working -> try other username
-            setError('Wrong credential! Please ask administrator or use Username: Test | Password: 123')
+            setError('Wrong credentials! Please ask administrator or use Username: Test | Password: 123')
         }
     }
 
