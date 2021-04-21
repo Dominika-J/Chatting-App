@@ -4,7 +4,7 @@
 * Person can sign up and have a chat conversation with other participants
 * Mobile responsive
 * Using ChatEngine: https://chatengine.io/
-* Deployed: 
+* Deployed: https://haveconversation.netlify.app/
 * Use those credentials to sign up => 
 
 <img src="img/preview.png">
