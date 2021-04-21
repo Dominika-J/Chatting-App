@@ -24,7 +24,7 @@ const MessageForm = (props) => {
     }
 
     const handleUpload = (event) => { 
-        sendMessage(creds, chatId, { files: event.target.files.value, text: '' }) //takes an Auth Object, Chat ID, Message Object and callback function as params then creates a new message from that user.
+        sendMessage(creds, chatId, { files: event.target.files, text: '' }) //takes an Auth Object, Chat ID, Message Object and callback function as params then creates a new message from that user.
     }
 
     return ( // form, where you type your message, send it and send a picture
