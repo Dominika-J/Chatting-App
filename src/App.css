@@ -6,34 +6,34 @@
 }
 
 .ce-chat-list {
-  background-color: #B932AD !important;
+  background-color: white !important;
   overflow: auto !important;
-  border-right: 1px solid #B932AD !important;
+  border-right: 1px solid #ededed !important;
 }
 
 .ce-chats-container {
-  background-color: #B932AD !important;
+  background-color: white !important;
 }
 
 .ce-active-chat-card {
-  background-color: #f9645c !important;
-  border: 4px solid #f9645c !important;
+  background-color: #eeebf1 !important;
+  border: 4px solid #eeebf1 !important;
   border-radius: 0px !important;
 }
 
 .ce-chat-title-text {
-  color: white !important;
-  
+  color: #f9645c !important;
 }
 
 .ce-chat-subtitle-text {
-  color: white !important;
+  color: #f9645c !important;
   font-size: 13px;
 }
 
 .ce-chat-form-container {
   padding-bottom: 20px !important;
   color: #f9645c;
+  border-bottom: 1px solid #eeebf1 !important;
 }
 
 .ce-chat-unread-dot {
@@ -48,7 +48,12 @@
 
 .ce-primary-button {
   border-radius: 6px !important;
-  background: -webkit-linear-gradient(left, #f9645c, #e13b69, #af30bf) !important;
+  background: -webkit-linear-gradient(
+    left,
+    #f9645c,
+    #e13b69,
+    #af30bf
+  ) !important;
   position: relative;
   bottom: 1px;
 }
@@ -243,7 +248,7 @@
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  background: rgb(237,235,240);
+  background: rgb(237, 235, 240);
   display: flex;
   justify-content: center;
   align-items: center;
