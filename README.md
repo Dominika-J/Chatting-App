@@ -5,7 +5,7 @@
 * Mobile responsive
 * Using ChatEngine: https://chatengine.io/
 * Deployed: https://haveconversation.netlify.app/
-* Use those credentials to sign up => 
+* Use those credentials to sign up => Username: Test Password: 000
 
 <img src="img/preview.png">
 <img src="img/view-chat2.png">
