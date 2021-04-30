@@ -1,4 +1,3 @@
-# WIP 
 
 * Chatting App
 * Person can sign up and have a chat conversation with other participants
